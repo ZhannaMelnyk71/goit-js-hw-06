@@ -6,13 +6,12 @@ const outputNameEl = document.querySelector('#name-output')
 console.log(outputNameEl)
 
 
-inputEl.addEventListener('input', (event) => {
-    outputNameEl.textContent = event.target.value;
-})
-
-outputNameEl.addEventListener('change', (event) => {
+const handleInputTextChange = (event) => {
     if (inputEl.value === '') {
         outputNameEl.textContent = "Anonymous";
-        return;
+        return
     }
-})
+    return outputNameEl.textContent = event.target.value
+}
+
+inputEl.addEventListener('input', handleInputTextChange)
