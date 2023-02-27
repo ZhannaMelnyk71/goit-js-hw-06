@@ -8,18 +8,18 @@ valueEl.textContent = 0;
 const decrementBtnEl = document.querySelector('button[data-action="decrement"]');
 console.log(decrementBtnEl)
 
-const clickDecBtnEl = () => {
+const handleDecBtnClick = () => {
     counterValue -= 1;
     valueEl.textContent = counterValue;
 }
-decrementBtnEl.addEventListener("click", clickDecBtnEl)
+decrementBtnEl.addEventListener("click", handleDecBtnClick)
 
 
 const incrementBtnEl = document.querySelector('button[data-action="increment"]');
 console.log(incrementBtnEl)
 
-const clickIncBtnEl = () => {
+const handleIncBtnClick = () => {
     counterValue += 1;
     valueEl.textContent = counterValue;
 }
-incrementBtnEl.addEventListener("click", clickIncBtnEl)
+incrementBtnEl.addEventListener("click", handleIncBtnClick)
