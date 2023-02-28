@@ -7,11 +7,16 @@ function getRandomHexColor() {
 const btnEl = document.querySelector('.change-color')
 console.log(btnEl)
 
+const bodyEl = document.querySelector('body')
+console.log(bodyEl)
+
 const bgColorEl = document.querySelector('.color')
 console.log(bgColorEl)
 
 const handleChangeColor = (event) => {
-  
+  bodyEl.style.backgroundColor = getRandomHexColor();
+
+  bgColorEl.textContent = bodyEl.style.backgroundColor
 }
 
 btnEl.addEventListener("click", handleChangeColor)
