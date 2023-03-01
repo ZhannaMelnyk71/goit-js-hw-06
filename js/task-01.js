@@ -1,4 +1,4 @@
-// Завдання 1
+
 
 const categoriesItemEl = document.querySelectorAll('.item');
 // console.log(categoriesItem)
